@@ -27,7 +27,6 @@ form.addEventListener("submit", function (e) {
         if (item.checked) selectedLevel = item.value;
     });
 
-    // RESET BORDER
     name.style.border = "";
     email.style.border = "";
     konsultasi.style.border = "";
@@ -65,7 +64,6 @@ form.addEventListener("submit", function (e) {
         return;
     }
 
-    // CREATE TABLE ROW
     const row = document.createElement("tr");
     row.innerHTML = `
         <td>${name.value}</td>
