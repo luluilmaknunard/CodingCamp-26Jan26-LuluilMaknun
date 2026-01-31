@@ -1,30 +1,13 @@
 welcomeMessage();
 
 function welcomeMessage() {
-    
-    let userResponse = prompt("Welcome to Yama Company! What is your name?");
-
-    if (userResponse === null || userResponse.trim() === "") {
-        userResponse = "Guest";
-    }
-
-    // Display the welcome message
-    document.getElementById("welcome-speech").innerText = `Hello, ${userResponse}! Welcome to Yama Company.`;
-}
-
-
-function submitMessage() { }
-
-welcomeMessage();
-
-function welcomeMessage() {
-    let userResponse = prompt("Welcome to Yama Company! What is your name?");
+    let userResponse = prompt("Welcome to L'StudyGroups! What is your name?");
     if (userResponse === null || userResponse.trim() === "") {
         userResponse = "Guest";
     }
 
     document.getElementById("welcome-speech").innerText =
-        `Hello, ${userResponse}! Welcome to Yama Company.`;
+        `Hello, ${userResponse}! Welcome to L'StudyGroups.`;
 }
 
 const form = document.getElementById("formData");
@@ -34,53 +17,63 @@ form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const name = document.getElementById("name");
-    const birthdate = document.getElementById("birthdate");
-    const message = document.getElementById("message");
+    const email = document.getElementById("email");
+    const konsultasi = document.getElementById("konsultasi");
+    const question = document.getElementById("question");
+    const levelInputs = document.querySelectorAll('input[name="level"]');
 
-    const genderInputs = document.querySelectorAll('input[name="gender"]');
-    let selectedGender = "";
-
-    genderInputs.forEach((item) => {
-        if (item.checked) {
-            selectedGender = item.value;
-        }
+    let selectedLevel = "";
+    levelInputs.forEach((item) => {
+        if (item.checked) selectedLevel = item.value;
     });
 
-    let isValid = true;
-
+    // RESET BORDER
     name.style.border = "";
-    birthdate.style.border = "";
-    message.style.border = "";
+    email.style.border = "";
+    konsultasi.style.border = "";
+    question.style.border = "";
+
+    let isValid = true;
 
     if (name.value === "") {
         name.style.border = "2px solid red";
         isValid = false;
     }
-    if (birthdate.value === "") {
-        birthdate.style.border = "2px solid red";
+
+    if (email.value === "") {
+        email.style.border = "2px solid red";
         isValid = false;
     }
-    if (message.value === "") {
-        message.style.border = "2px solid red";
+
+    if (konsultasi.value === "") {
+        konsultasi.style.border = "2px solid red";
         isValid = false;
     }
-    if (selectedGender === "") {
+
+    if (question.value === "") {
+        question.style.border = "2px solid red";
+        isValid = false;
+    }
+
+    if (selectedLevel === "") {
+        alert("Silakan pilih level pertanyaan!");
         isValid = false;
     }
 
     if (!isValid) {
-        alert("Form ini tidak boleh kosong!");
+        alert("Form tidak boleh kosong!");
         return;
     }
 
+    // CREATE TABLE ROW
     const row = document.createElement("tr");
     row.innerHTML = `
-        <td class="border">${name.value}</td>
-        <td class="border">${birthdate.value}</td>
-        <td class="border">${selectedGender}</td>
-        <td class="border">${message.value}</td>
-        <td class="border text-blue-500 cursor-pointer">Klik Disini</td>
-        <td class="border cursor-pointer">🗑</td>
+        <td>${name.value}</td>
+        <td>${email.value}</td>
+        <td>${konsultasi.value}</td>
+        <td>${selectedLevel}</td>
+        <td>${question.value}</td>
+        <td class="cursor-pointer">🗑</td>
     `;
 
     row.querySelector("td:last-child").addEventListener("click", function () {
@@ -90,5 +83,3 @@ form.addEventListener("submit", function (e) {
     tableBody.appendChild(row);
     form.reset();
 });
-
-

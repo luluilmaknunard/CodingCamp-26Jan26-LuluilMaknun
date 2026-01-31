@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Lu'luil Maknun</title>
+    <title>L'StudyGroups</title>
 
     <!-- CSS External -->
     <link rel="stylesheet" href="css/style.css">
@@ -22,7 +22,7 @@
         <nav class="flex flex-col md:flex-row gap-2">
             <a class="border rounded p-2" href="#home-page">Home</a>
             <a class="border rounded p-2" href="#our-profile-page">Our Profile</a>
-            <a class="border rounded p-2" href="#portfolio-page">Portfolio</a>
+            <a class="border rounded p-2" href="#mentor-section">Mentors</a>
             <a class="border rounded p-2" href="#message-us-page">Message Us</a>
         </nav>
     </header>
@@ -31,104 +31,230 @@
 
     <main>
         <!-- Home Page -->
-        <section id="home-page" class="min-h-[500px] text-center content-center">
-            <h2 class="text-xl font-bold" id="welcome-speech">Welcome to Our Website</h2>
-            <p class="mt-2">We are glad to have you here. Explore our services and offerings.</p>
-        </section>
+        <section id="home-page" class="min-h-[500px] flex items-center bg-gray-50">
+    <div class="max-w-5xl mx-auto px-6 text-center">
 
-        <hr />
+        <h2 id="welcome-speech" class="text-3xl font-bold mb-4">
+            Welcome to Our Website
+        </h2>
+
+        <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+            A collaborative study group built in Coding Camp to help learners
+            grow their skills in web development through practice and teamwork.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <div class="border rounded-lg p-4 shadow-sm">
+                <div class="text-3xl mb-2">📄</div>
+                <h3 class="font-semibold">HTML</h3>
+                <p class="text-sm text-gray-600">Website structure fundamentals.</p>
+            </div>
+
+            <div class="border rounded-lg p-4 shadow-sm">
+                <div class="text-3xl mb-2">🎨</div>
+                <h3 class="font-semibold">CSS</h3>
+                <p class="text-sm text-gray-600">Styling & responsive layout.</p>
+            </div>
+
+            <div class="border rounded-lg p-4 shadow-sm">
+                <div class="text-3xl mb-2">⚙️</div>
+                <h3 class="font-semibold">JavaScript</h3>
+                <p class="text-sm text-gray-600">Interactivity & validation.</p>
+            </div>
+        </div>
+
+        <a href="#our-profile-page"
+           class="inline-block bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">
+            Learn More
+        </a>
+
+    </div>
+</section>
 
         <!-- Our Profile Page -->
-        <section id="our-profile-page" class="min-h-[500px] text-center content-center">
-            <h2 class="text-xl font-bold">About Yama Company</h2>
-            <p class="mt-2">Yama Company is dedicated to providing top-notch services in various domains.</p>
-        </section>
+        <section id="our-profile-page" class="min-h-[600px] bg-gray-100 py-16 px-4">
+            
+            <!-- Our Profile Card -->
+            <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-md p-8 text-center">
+                <h2 class="text-2xl font-bold mb-4">Our Profile</h2>
 
-        <hr />
-
-        <!-- Portfolio Page -->
-       <section id="portfolio-page" class="min-h-[500px] text-center content-center">
-            <h2 class="text-xl font-bold">Our Portfolio</h2>
-
-            <p class="mt-2">
-                Website ini merupakan salah satu contoh portofolio sederhana yang dibuat menggunakan
-                HTML, CSS, dan JavaScript. Proyek ini menampilkan fitur navigasi, form input, validasi data,
-                serta tampilan yang responsif untuk perangkat desktop dan mobile.
-            </p>
-
-            <p class="text-gray-400 text-sm italic mt-4">
-                *Bagian ini diisi minimal 50 kata tentang project atau karya yang pernah dibuat.*
-            </p>
-        </section>
-
-
-
-        <hr />
-
-        <!-- Message Us Page -->
-        <section id="message-us-page" class="min-h-[500px] mx-8">
-
-            <header>
-                <h2 class="text-xl font-bold">Message Us</h2>
-                <p class="mt-2">Have questions or want to work with us? Send us a message and we'll get back to you promptly.</p>
-                <p class="text-gray-400 text-sm italic mt-2">
-                    *Semua field wajib diisi. Form tidak boleh kosong.*
+                <p class="text-gray-700 leading-relaxed">
+                    L'StudyGroups is a collaborative learning community formed as part of the Coding Camp program.
+                    This group provides a supportive environment for learning web development through
+                    structured materials, hands-on practice, and teamwork.
                 </p>
-            </header>
 
+                <p class="mt-4 text-gray-700 leading-relaxed">
+                    We focus on mastering HTML, CSS, and JavaScript while building real projects
+                    that reflect real-world website development.
+                </p>
+            </div>
 
-        <form id="formData">
-    <div class="mb-4">
-        <label class="block mb-2">Name:</label>
-        <input class="w-full p-2 border rounded" type="text" id="name" required />
-    </div>
+        <!-- Learning Levels -->
+        <div class="max-w-6xl mx-auto mt-14">
+            <h3 class="text-xl font-semibold text-center mb-10">Learning Levels</h3>
 
-    <div class="mb-4">
-        <label class="block mb-2">Tanggal Lahir:</label>
-        <input class="w-full p-2 border rounded" type="date" id="birthdate" required />
-    </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-    <div class="mb-4">
-        <label class="block mb-2">Jenis Kelamin:</label>
-        <input type="radio" name="gender" value="Laki-Laki" required> Laki-Laki
-        <input type="radio" name="gender" value="Perempuan"> Perempuan
-    </div>
+                <!-- Beginner -->
+                <div class="bg-blue-100 border-l-4 border-blue-500 rounded-lg p-6 shadow hover:shadow-lg transition">
+                    <div class="text-4xl mb-3">🧩</div>
+                    <h4 class="font-semibold text-lg mb-2">Beginner Level</h4>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Introduction to web development concepts including HTML structure,
+                        basic CSS styling, and understanding how a website works.
+                    </p>
+                </div>
 
-    <div class="mb-4">
-        <label class="block mb-2">Message:</label>
-        <textarea class="w-full p-2 border rounded" id="message" rows="5" required></textarea>
-    </div>
+                <!-- Intermediate -->
+                <div class="bg-green-100 border-l-4 border-green-500 rounded-lg p-6 shadow hover:shadow-lg transition">
+                    <div class="text-4xl mb-3">⚙️</div>
+                    <h4 class="font-semibold text-lg mb-2">Intermediate Level</h4>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Focus on responsive layouts, CSS positioning,
+                        and basic JavaScript interactions to improve user experience.
+                    </p>
+                </div>
 
-    <button class="px-4 py-2 bg-blue-500 text-white rounded" type="submit">
-        Send Message
-    </button>
-</form>
+                <!-- Project -->
+                <div class="bg-purple-100 border-l-4 border-purple-500 rounded-lg p-6 shadow hover:shadow-lg transition">
+                    <div class="text-4xl mb-3">🚀</div>
+                    <h4 class="font-semibold text-lg mb-2">Project-Based Learning</h4>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Apply skills by building mini projects such as portfolio websites,
+                        form validation, and DOM manipulation.
+                    </p>
+                </div>
 
-<table class="mt-6 w-full border text-center">
-    <thead>
-        <tr class="border">
-            <th class="border">Nama</th>
-            <th class="border">Tanggal Lahir</th>
-            <th class="border">Jenis Kelamin</th>
-            <th class="border">Pesan</th>
-            <th class="border">Profile</th>
-            <th class="border">Delete</th>
-        </tr>
-    </thead>
-    <tbody id="tableData"></tbody>
-</table>
-
-        </section>
-    </main>
-
-    <footer>
-        <div class="text-center p-4">
-            &copy; 2024 Yama Company. All rights reserved.
+            </div>
         </div>
-    </footer>
 
-    <!-- JavaScript External -->
-    <script src="js/script.js"></script>
-</body>
+    </section>
+
+        <!-- Mentor Section -->
+
+            <section id="mentor-section" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+
+            <h3 class="text-xl font-semibold text-center mb-14">
+            Our Mentors
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+            <!-- Mentor 1 -->
+            <div class="mentor-card">
+                <div class="mentor-photo mentor-frontend"></div>
+                <h4>Frontend Mentor</h4>
+                <p>
+                Focus on HTML structure, CSS styling, and responsive web design
+                for beginner to intermediate learners.
+                </p>
+            </div>
+
+            <!-- Mentor 2 -->
+            <div class="mentor-card">
+                <div class="mentor-photo mentor-js"></div>
+                <h4>JavaScript Tutor</h4>
+                <p>
+                Guides students through JavaScript basics, logic, and DOM
+                manipulation for interactive websites.
+                </p>
+            </div>
+
+            <!-- Mentor 3 -->
+            <div class="mentor-card">
+                <div class="mentor-photo mentor-project"></div>
+                <h4>Project Reviewer</h4>
+                <p>
+                Reviews student projects, gives feedback, and helps improve
+                code quality and structure.
+                </p>
+            </div>
+
+            </div>
+        </div>
+        </section>
+
+
+        <!-- Massage us pages -->
+            <section id="message-us-page" class="message-section">
+            <div class="message-container">
+
+                <div class="message-card">
+                <h2 class="message-title">Ask Our Mentors</h2>
+
+                <p class="message-desc">
+                    Ajukan pertanyaan sesuai level belajarmu. Mentor kami akan membantu ✨
+                </p>
+
+                <p class="message-note">
+                    *Semua field wajib diisi*
+                </p>
+
+                <!-- FORM -->
+                <form id="formData" class="message-form">
+
+                    <div class="form-group">
+                    <label>Nama</label>
+                    <input type="text" id="name" placeholder="Masukkan nama" />
+                    </div>
+
+                    <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" id="email" placeholder="Masukkan email" />
+                    </div>
+
+                    <div class="form-group">
+                    <label>Tanggal Konsultasi</label>
+                    <input type="date" id="konsultasi" />
+                    </div>
+
+                    <div class="form-group">
+                    <label>Level Pertanyaan</label>
+                    <div class="radio-group">
+                        <label>
+                        <input type="radio" name="level" value="Beginner"> Beginner
+                        </label>
+                        <label>
+                        <input type="radio" name="level" value="Intermediate"> Intermediate
+                        </label>
+                        <label>
+                        <input type="radio" name="level" value="Project-Based"> Project-Based
+                        </label>
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                    <label>Pertanyaan</label>
+                    <textarea id="question" rows="4" placeholder="Tulis pertanyaanmu..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                    Kirim Pertanyaan
+                    </button>
+                </form>
+
+                <!-- TABLE -->
+                <table class="message-table">
+                    <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Email</th>
+                        <th>Tanggal Konsultasi</th>
+                        <th>Level</th>
+                        <th>Pertanyaan</th>
+                        <th>Hapus</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tableData"></tbody>
+                </table>
+
+                </div>
+            </div>
+            </section>
+        <!-- JavaScript External -->
+        <script src="js/script.js"></script>
+    </body>
 
 </html>
